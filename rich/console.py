@@ -2537,6 +2537,8 @@ class Console:
         clear: bool = True,
         code_format: str = CONSOLE_SVG_FORMAT,
         font_aspect_ratio: float = 0.61,
+        font_char_height: int = 22,
+        font_line_height: int = 25,
         unique_id: Optional[str] = None,
     ) -> None:
         """Generate an SVG file from the console contents (requires record=True in Console constructor).
@@ -2561,6 +2563,8 @@ class Console:
             clear=clear,
             code_format=code_format,
             font_aspect_ratio=font_aspect_ratio,
+            font_char_height=font_char_height,
+            font_line_height=font_line_height,
             unique_id=unique_id,
         )
         with open(path, "wt", encoding="utf-8") as write_file:
