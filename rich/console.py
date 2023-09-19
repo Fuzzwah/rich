@@ -2283,6 +2283,8 @@ class Console:
         clear: bool = True,
         code_format: str = CONSOLE_SVG_FORMAT,
         font_aspect_ratio: float = 0.61,
+        font_char_height: int = 22,
+        font_line_height: int = 25,
         unique_id: Optional[str] = None,
     ) -> str:
         """
@@ -2342,9 +2344,9 @@ class Console:
         _theme = theme or SVG_EXPORT_THEME
 
         width = self.width
-        char_height = 20
+        char_height = font_char_height
         char_width = char_height * font_aspect_ratio
-        line_height = char_height * 1.22
+        line_height = font_line_height
 
         margin_top = 1
         margin_right = 1
